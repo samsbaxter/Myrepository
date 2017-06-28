@@ -4,7 +4,7 @@ from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
 #from directorypath.gridpack import *
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('/afs/cern.ch/work/s/sabaxter/CMSSW_7_1_26/src/genproductions/bin/MadGraph5_aMCatNLO/DH_4f_LO_xqcut_20_tarball.tar.xz'),
+    args = cms.vstring('/afs/cern.ch/work/s/sabaxter/dmMcProduction/DH_4f_LO_Zp_1j_xqcut_30_tarball.tar.xz'),
     nEvents = cms.untracked.uint32(10000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
@@ -31,7 +31,7 @@ generator = cms.EDFilter("Pythia8HadronizerFilter",
             'JetMatching:etaJetMax = 5.',
             'JetMatching:coneRadius = 1.',
             'JetMatching:slowJetPower = 1',
-            'JetMatching:qCut = 25',  # actual merging scale 15
+            'JetMatching:qCut = 36',  # actual merging scale 15
             'JetMatching:nQmatch = 4', # 4: 4-flavor scheme (no matching of b), 5: 5-flavour scheme
             'JetMatching:nJetMax = 1', # nPartons in born matrix element for highest multiplicity
             'JetMatching:doShowerKt = off', #off for MLM matching, turn on for shower-kT matching
