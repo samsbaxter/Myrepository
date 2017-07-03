@@ -4,7 +4,7 @@ from Configuration.Generator.Pythia8CommonSettings_cfi import *
 from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
 #from directorypath.gridpack import *
 externalLHEProducer = cms.EDProducer("ExternalLHEProducer",
-    args = cms.vstring('/afs/cern.ch/work/s/sabaxter/dmMcProduction/DH_4f_LO_Zp_1j_xqcut_30_tarball.tar.xz'),
+    args = cms.vstring('Gridpack/DH_4f_LO_Zp_1500_DM_400_tarball.tar.xz'),
     nEvents = cms.untracked.uint32(10000),
     numberOfParameters = cms.uint32(1),
     outputFile = cms.string('cmsgrid_final.lhe'),
